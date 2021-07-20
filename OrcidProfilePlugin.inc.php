@@ -802,7 +802,7 @@ class OrcidProfilePlugin extends GenericPlugin {
 
 		$issueId = $publication->getData('issueId');
 		if (isset($issueId)) {
-			$issue = Services::get('issue')->get($issueId);
+			$issue = Repo::issue()->get($issueId);
 		}
 
 		$authorDao = DAORegistry::getDAO('AuthorDAO');
